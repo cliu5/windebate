@@ -1,0 +1,80 @@
+
+.home-page {
+        background-image: url("../static/images/cover-pic.jpg");*/
+        height: 580px;
+        width: 100%;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* border-bottom: 1px solid #beb6db; */
+    }
+/* } */
+
+
+.col {
+    /* padding: 10px; */
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.home-page-button {
+    border-radius: 20px;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #84b7b1;
+    margin: 3rem 0.5rem;
+}
+
+.home-page-button:hover {
+    cursor: pointer;
+}
+
+.who-we-are-page {
+    background-image: url("../static/images/stripes.jpg");
+    linear-gradient(rgb(195, 216, 255), rgb(44, 133, 235));*/
+    height: 100%;
+    min-height:450px;
+    width: 100%;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+
+/* .col {
+    padding: 10px;
+    font-size: 2rem;
+} */
+
+@media (min-width: 768px) {
+    .who-we-are-header {
+        text-align: center;
+        padding: 2% 0;
+        font-size: 3rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 0 5%;
+
+}
+
+h5 {
+    padding: 0 5%;
+    color:  #7c4eaa;
+    font-weight: 600;
+}
+
+.claire {
+    width: 200px;
+    height: 200px;
+    margin-left: 5%;
+}
+
+.win-debate-header {
+    color: white;
+}

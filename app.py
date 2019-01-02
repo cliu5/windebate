@@ -19,9 +19,11 @@ app.secret_key = urandom(32)
 def home():
     builder.main()
     if 'username' in session: #if user is logged in
-        return redirect(url_for('authPage'))
+        #return redirect(url_for('authPage'))
+        return render_template('home.html')
     else:
-        return render_template('auth.html')
+        #return redirect(url_for('authPage'))
+        return render_template('home.html')
 
 #----------------------------------------------------------login/register/logout--------------------------------------------------------
 @app.route("/logout")
@@ -35,6 +37,11 @@ def logout():
     else:
         return redirect(url_for('home'))
 
+@app.route("/login")
+def login():
+    print('------------')
+    return render_template('login.html')
+
 @app.route("/auth",methods=['GET','POST'])
 def authPage():
     '''
@@ -43,16 +50,8 @@ def authPage():
     '''
     if 'username' in session:
         username = session['username']
-        score = search.score(username)[0]
-        scores = search.highScores()
-        counter = 0
-        highScores = []
         userNames = []
-        while counter < len(scores):
-            highScores.append(scores[counter][0])
-            userNames.append(scores[counter][1])
-            counter += 1
-        return render_template('home.html', Name = username,Points = score, scores= highScores, names = userNames)
+        return render_template('home.html')
     else:
         try:
             username=request.form['username'] #username

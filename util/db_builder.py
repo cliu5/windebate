@@ -9,7 +9,6 @@ def users(): #creates the users db
 
 def main(): #calls all of the functions to build the databases
     try:
-        
         users()
         questions()
     except:
